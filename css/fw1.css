@@ -1,5 +1,24 @@
-body {
-	margin: 0;
+a,a:visited {color:darkblue;}
+
+body {margin: 0;}
+
+h1,h2,h3,h4{
+	margin:0;
+	padding:0;
+}
+
+h1{
+	color:#666666;
+	font-size:25px;
+}
+
+
+h2{
+	border:1px solid #888;
+	border-width:0 0 1px 0;
+	color:#888;
+	font-size:18px;
+	margin:60px 0 0 0;
 }
 
 code{
@@ -17,10 +36,9 @@ code .highListAttribute{
 	margin: 0 150px;
 	font-family: verdana, helvetica;
 }
-.page {
-	padding: 5;
-	/*background-color: lightgray;*/
-}
+
+.page { padding: 5;}
+
 .footer {
 	text-align: center;
 	font-size: small;

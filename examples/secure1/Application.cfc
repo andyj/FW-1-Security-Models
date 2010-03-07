@@ -3,7 +3,6 @@
 
 	<cffunction name="setupSession" access="public" returntype="void" >
 	    <cfparam name="session.isAuthenticated" default="false" />
-	    <cfparam name="session.userID" default="anonymous" />
 	    <cfparam name="session.roles" default="public" />
 	</cffunction>
 
@@ -11,12 +10,9 @@
 	    <cfset var stAction = GetMetaData(application[variables.framework.applicationKey].cache.controllers[getSection()][getItem()]) />	
 	    <cfset var isAuthorised = false />
 	
-
 		<cfparam name="request.context.message" default="" />		
 		<!--- The default role for all events is public --->
 		<cfparam name="stAction.securityroles" default="public" />
-		
-
 		
 		<!--- We only run role check for NON public pages --->
 		<cfif stAction.securityroles NEQ "public">
