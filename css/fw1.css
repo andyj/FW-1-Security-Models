@@ -1,6 +1,18 @@
 body {
 	margin: 0;
 }
+
+code{
+	clear:both;
+	color:#DD0000;
+	display:block;
+}
+
+code .highListAttribute{
+	color:blue;
+	font-weight:bold;
+}
+
 .wrap {
 	margin: 0 150px;
 	font-family: verdana, helvetica;
@@ -12,4 +24,30 @@ body {
 .footer {
 	text-align: center;
 	font-size: small;
+}
+
+.warning{
+	border:1px dotted #CC0000;
+	border-width:1px 0;
+	color:#CC0000;
+	margin:10px 0;
+	padding: 10px;
+	text-align:center;
+}
+
+.topNav, .topNav a{
+	color:black;
+	font-size:11px;
+}
+
+.userrole{
+	border:1px dotted green;
+	border-width:1px 0;
+	color:green;
+	font-size:11px;
+	margin:40px 0;	
+	padding:3px 0;	
+}
+.userrole a{
+	color:green;	
 }

@@ -7,7 +7,8 @@
 	<body>
 		<div class="wrap">
 			<div class="page">
-				<cfoutput>#body#</cfoutput>
+				<img src="css/padlock.png" align="right">				
+				<cfoutput>#body#</cfoutput>				
 			</div>
 			<div class="footer">
 				<a href="http://fw1.riaforge.org/">FW/1</a> is copyright (c) 2009 Sean Corfield, Ryan Cogswell - 
@@ -16,3 +17,4 @@
 		</div>
 	</body>
 </html>
+<cfsetting showdebugoutput="false">
