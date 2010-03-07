@@ -12,6 +12,7 @@
 			<h1>Security Model</h1>
 			
 			<div class="topNav">
+				<a href="../../">&lt;&lt; Back to examples</a> /
 				<a href="#buildUrl(variables.framework.home)#">Home</a> /			
 				<a href="#buildUrl('main.adminOnly')#">Admin Only</a> /
 				<a href="#buildUrl('main.adminItOnly')#">Admin &amp; IT Only</a> 			 				
