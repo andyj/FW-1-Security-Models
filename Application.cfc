@@ -12,4 +12,4 @@
 	// 		base = getDirectoryFromPath( CGI.SCRIPT_NAME ) & 'introduction'
 	// }
 
-</cfscript></cfcomp2onent>
+</cfscript></cfcomponent>
