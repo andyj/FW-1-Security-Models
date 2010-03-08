@@ -1,10 +1,18 @@
 Framework One (FW/1) Security models
-http://github.com/andyj/FW-1-Security-Models
 
+++--++--++--++--++--++--++--++--++--++--++--++--++--++--++--++--++--++--++--++
 Andy Jarrett:	www.andyjarrett.com
 AJ Mercer:		www.webonix.net
 
+Home:			http://fw1-security-model.webonix.org
+Git Project:	http://github.com/andyj/FW-1-Security-Models
+++--++--++--++--++--++--++--++--++--++--++--++--++--++--++--++--++--++--++--++
 
+
+Clone the project to the root of your web-app then call the following URL
 http://{web root}/fw1_security/
 
+
+Alternatively you can copy the folder with /examples/ and drop them in to your
+Framework One example folder
 
