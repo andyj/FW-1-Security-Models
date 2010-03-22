@@ -7,4 +7,9 @@
 	variables.framework = structNew();
 	variables.framework.usingSubsystems = true;
 	
+	function setupApplication() 
+	{
+		setBeanFactory(createObject("component", "models.ObjectFactory").init(expandPath("./assets/config/beans.xml.cfm")));	
+	}	
+	
 </cfscript></cfcomponent>

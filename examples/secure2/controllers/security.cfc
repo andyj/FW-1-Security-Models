@@ -10,16 +10,17 @@
 	<cffunction name="checkAuthorisation" access="public" output="false" returntype="any">
 		<cfargument name="rc">
 		<cfset var actionWhiteList = [
-			"main.default"
+			"main.default",
+			"users.login"
 		] />
 
 	    <cfset var isAuthorised = false />
 	
 		<cfparam name="request.context.message" default="" />		
 
-		<cfif NOT arrayFind(actionWhiteList, rc.action) AND session.user.isloggedin EQ false>
+		<cfif NOT arrayFind(actionWhiteList, rc.action) AND NOT session.user.isloggedin>
 			<cfset rc.loggedin = 0 />
-			<cfset variables.fw.redirect( 'gpr.welcome' , false , 'loggedin' ) />
+			<cfset variables.fw.redirect( 'users.login' , false , 'loggedin' ) />
 		</cfif>
 
 
