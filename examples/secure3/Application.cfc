@@ -7,40 +7,23 @@
 	</cffunction>
 
 	<cffunction name="hasAccess" access="public" returntype="void" >
-		<!--- You can get the current event from request.context['action'] --->	
-		<cfif true>
-			<cfthrow message="ACCESS DENIED!" />
-		</cfif>
-	</cffunction>
-
-	<cffunction name="setupRequest" access="public" returntype="void" output="false">
-	    <cfset var stAction = GetMetaData(application[variables.framework.applicationKey].cache.controllers[getSection()][getItem()]) />	
-	    <cfset var isAuthorised = false />
-	
-		<cfparam name="request.context.message" default="" />		
-		<!--- The default role for all events is public --->
-		<cfparam name="stAction.securityroles" default="public" />
+		<cfargument name="inAction" default="" hint="By default we use the current action but you can pass this in to override it" />	
+		<cfargument name="throwError" default="false" type="boolean" hint="If true then throw error else return boolean result"  />
 		
-		<!--- We only run role check for NON public pages --->
-		<cfif stAction.securityroles NEQ "public">
-			<!--- Check the roles --->
-		    <cfloop list="#stAction.securityroles#" index="role">
-		        <cfif ListFindNoCase(session.roles, role) NEQ 0>
-		            <cfset isAuthorised = true />
-		            <cfbreak />
-		        </cfif>
-		    </cfloop>
-
-			<!--- If not authorised throw them to the applications home page --->
-		    <cfif NOT isAuthorised>
-				
-		        <cfset request.context['message'] = "Unauthorised" />
-		        <cfset redirect(action=variables.framework.home,preserve='message') />
-		    </cfif>
-	
+		<cfset var thisAction = request.context['action'] />
+		<cfset var hasAccess = true />
+		
+		<!--- Override looking at current action --->
+		<cfif len(trim(arguments.inAction))><cfset thisAction = arguments.inAction /></cfif>
+		
+		<!--- For testing we are throwing an error for the "adminOnly" event --->
+		<cfif thisAction EQ "main.adminOnly"><cfset var hasAccess = false /></cfif>
+		
+		<cfif NOT hasAccess AND arguments.throwError>
+			<cfthrow message="ACCESS DENIED!" detail="You are not authorised to be here" /><cfabort>
 		</cfif>
-
+		
+		<cfreturn hasAccess />
 	</cffunction>
-
 
 </cfcomponent>

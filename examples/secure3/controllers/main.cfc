@@ -14,7 +14,8 @@
 
 	<cffunction name="adminOnly" output="false" securityroles="admin">
 		<cfargument name="rc" />		
-		<cfset fw.hasAccess() />	</cffunction>
+		<cfset fw.hasAccess(throwError=true) />
+	</cffunction>
 
 
 		

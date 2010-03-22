@@ -18,7 +18,7 @@ h2{
 	border-width:0 0 1px 0;
 	color:#888;
 	font-size:18px;
-	margin:60px 0 0 0;
+	margin:30px 0 0 0;
 }
 
 code{
@@ -68,4 +68,14 @@ code .highListAttribute{
 }
 .userrole a{
 	color:green;	
+}
+
+dt,dd{font-size:12px;}
+
+dt{
+	color:#DD0000;
+}
+dd{
+	color:#666666;
+	margin:0 0 5px 0;
 }
