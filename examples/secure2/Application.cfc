@@ -1,6 +1,6 @@
 <cfcomponent extends="org.corfield.framework"><cfscript>
 
-	this.name = 'fw1-secure2'
+	this.name = 'fw1-secure2';
 	this.sessionManagement = true;
 
 	function onSessionStart(){
