@@ -1,5 +1,6 @@
 <cfcomponent extends="org.corfield.framework">
-	<cfset this.name = "fw1-examples">
+	<cfset this.name = "fw1-secure3">
+	<cfset this.sessionManagement = true />
 
 	<cffunction name="setupSession" access="public" returntype="void" >
 	    <cfparam name="session.isAuthenticated" default="false" />

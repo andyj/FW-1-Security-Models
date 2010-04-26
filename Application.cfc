@@ -1,7 +1,8 @@
 <cfcomponent extends="org.corfield.framework"><cfscript>
 	// Either put the org folder in your webroot or create a mapping for it!
 	
-	this.name = 'fw1-security';
+	this.name = 'fw1-securityv001';
+	this.sessionManagement = true;	
 	// FW/1 - configuration:
 	variables.framework = structNew();
 	// controllers/layouts/services/views are in this folder:

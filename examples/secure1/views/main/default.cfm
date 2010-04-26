@@ -9,7 +9,8 @@
 		&lt;/cffunction><br/>
 	</code>
 	
-	
+	<p>In the footer you can change your role to either <em>PUBLIC</em>, <em>ADMIN</em>, or <em>IT</em>. Then,
+		using the links at the top of the page you can try	and access the different areas</p>
 	    	
 	
 </cfoutput>
