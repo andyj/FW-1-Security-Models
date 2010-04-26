@@ -23,13 +23,7 @@
 			
 			<!--- Body --->
 			#body#
-			<div class="userrole">
-				Your current role is: <b>#session.roles#</b> - 
-				Change role to
-				<a href="#buildUrl('main.changeUserRole')#&amp;userRole=public">Public</a> |
-				<a href="#buildUrl('main.changeUserRole')#&amp;userRole=admin">Admin</a> |
-				<a href="#buildUrl('main.changeUserRole')#&amp;userRole=IT">IT</a>			
-			</div>
+			
 		</div>
 	</body>
 </html>

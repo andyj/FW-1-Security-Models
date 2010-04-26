@@ -17,13 +17,14 @@
 	    <cfset var isAuthorised = false />
 	
 		<cfparam name="request.context.message" default="" />		
+		<cfparam name="session.user.isloggedin" default="false" />
+
 
 		<cfif NOT arrayFind(actionWhiteList, rc.action) AND NOT session.user.isloggedin>
 			<cfset rc.loggedin = 0 />
-			<cfset variables.fw.redirect( 'users.login' , false , 'loggedin' ) />
+			<cfset variables.fw.redirect( 'users.login') />
 		</cfif>
-
-
+		
 
 		<cfreturn this>
 	</cffunction>

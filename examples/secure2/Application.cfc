@@ -11,6 +11,8 @@
 	function setupRequest() {
 		// security controller
 		var security = getController('security');
-		doController(security,'checkAuthorization');
+
+		doController(security,'checkAuthorisation');
+
 	}
 </cfscript></cfcomponent>
